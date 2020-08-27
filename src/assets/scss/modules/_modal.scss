@@ -1,0 +1,119 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+
+  &.active {
+    display: block;
+  }
+
+  &-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+
+    .header-text {
+      display: flex;
+      align-items: center;
+      margin: 16px 0 32px;
+
+      img {
+        width: 40px;
+        margin-right: 34px;
+      }
+    }
+  }
+
+  .close {
+    color: #002248;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    height: 14px;
+    line-height: 14px;
+    overflow: hidden;
+
+    &:hover, &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.view-appointment-modal {
+  .modal-content {
+    width: 370px !important;
+  }
+
+  .header-text {
+    color: #002248;
+  }
+
+  .text-line {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .text-label {
+    width: 110px;
+    margin-right: 14px;
+    color: #002248;
+    font-weight: 600;
+  }
+
+  .text-item {
+    width: calc(100% - 90px);
+    color: #002248;
+  }
+}
+
+.cancel-appointment-modal {
+  .modal-content {
+    width: 280px !important;
+
+    .header-text {
+      text-align: center;
+      margin: 16px 16px 32px 16px;
+      color: #121254;
+      font-weight: 600;
+    }
+
+    .notification-text {
+      text-align: center;
+      color: #121254;
+      font-size: 13px;
+      margin: 5px 5px 16px;
+    }
+
+    .modal-row {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .btn-cancel {
+      background-color: #ff144a;
+      color: white;
+      padding: 7px 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .back-link {
+      color: #121254;
+      font-size: 13px;
+    }
+  }
+}

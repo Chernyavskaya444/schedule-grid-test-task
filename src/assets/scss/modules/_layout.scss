@@ -1,0 +1,46 @@
+.layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #f0f2f5;
+  height: 100vh;
+
+  &.layout-has-sidebar {
+    flex-direction: row;
+    flex: 1;
+    height: auto;
+
+    & > .layout,
+    & > .layout-content {
+      overflow-x: hidden;
+    }
+  }
+
+  &-header {
+    flex: 0 0 auto;
+  }
+
+  &-header {
+    height: 50px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: #000002;
+  }
+
+  &-content {
+    height: 100%;
+  }
+
+  &-sidebar {
+    flex: 0 0 350px;
+    width: 350px;
+
+    &-children {
+      height: 100%;
+      margin-top: -0.1px;
+      padding-top: 0.1px;
+    }
+  }
+}

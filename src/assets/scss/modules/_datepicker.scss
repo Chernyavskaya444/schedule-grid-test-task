@@ -1,0 +1,44 @@
+.date-picker {
+  &-container {
+    position: relative;
+    width: 100%;
+  }
+
+  &-dropdown-content {
+    position: absolute;
+    background: #fff;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+  }
+
+  &-bottom {
+    border-top: 1px solid #f2f2f2;
+    padding: 7px 10px;
+    margin-top: 10px;
+
+    button {
+      padding: 4px 14px;
+      margin-right: 7px;
+      cursor: pointer;
+      min-width: 104px;
+    }
+
+    .btn-ok {
+      font-size: 14px;
+      img {
+        bottom: 1px;
+      }
+    }
+
+    .btn-cancel {
+      font-size: 14px;
+      img {
+        bottom: 1px;
+      }
+    }
+  }
+}

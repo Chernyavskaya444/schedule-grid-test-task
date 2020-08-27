@@ -1,0 +1,136 @@
+.form {
+  &-group {
+    display: flex;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+    border-radius: 3px;
+  }
+
+  &-input {
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    width: 100%;
+    flex: 1;
+    padding: 0 7px;
+    height: 28px;
+    font-size: 14px;
+    background: #fff;
+
+    &:active {
+      outline: none;
+    }
+
+    &:hover {
+      border-color: #507b30;
+    }
+
+    &:focus {
+      box-shadow: 0 0 4px #507b30;
+      border-color: #507b30;
+      outline: none;
+    }
+
+    &_with-btn {
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+
+    &-btn {
+      border-radius: 0 5px 5px 0;
+      border: 1px solid #c5c5c5;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  &-search-btn {
+    background: url('../../imgs/search.svg') no-repeat center / 16px 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+  &-datepicker-btn {
+    height: 28px;
+    width: 48px;
+    position: relative;
+    padding-right: 18px;
+    padding-top: 2px;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &::after {
+      content: "";
+      border-top: 4px solid #4b4b4b;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      margin-top: -2px;
+    }
+
+    img {
+      width: 14px;
+    }
+  }
+
+  &-checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+
+      &:checked + .form-checkbox-ico::after {
+        opacity: 1;
+      }
+    }
+
+    &-ico {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #cdcdcd;
+      border-radius: 2px;
+      box-shadow: inset 1px 2px 3px rgba(0,0,0,.2);
+      margin-right: 8px;
+      position: relative;
+
+      &::after {
+        content: '';
+        border-right: 2px solid #507b30;
+        border-bottom: 2px solid #507b30;
+        transform: rotate(45deg);
+        width: 3px;
+        height: 6px;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        opacity: 0;
+      }
+    }
+
+    &-text {
+      flex: 1;
+    }
+  }
+
+  &-clear-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+    background: url('../../imgs/cross-red.svg') no-repeat 0 0 / 10px;
+    width: 10px;
+    height: 10px;
+    margin: 9px 8px 0 -18px;
+  }
+}
