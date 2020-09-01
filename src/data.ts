@@ -248,7 +248,7 @@ export const appointments: Appointment[] = [
     id: 4,
     patientId: 4,
     resourceId: 2,
-    date: '2020-08-31',
+    date: '2020-09-07',
     time: '10:30',
   },
 ];
